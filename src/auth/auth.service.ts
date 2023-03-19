@@ -39,7 +39,7 @@ export class AuthService {
 
   async login(loginUserDto: LoginUserDto): Promise<string> {
     const { email, password } = loginUserDto;
-
+    console.log(process.env.JWT_SECRET, 'yes oo');
     const user = await this.userRepository.findOneBy({ email });
 
     if (!user || !(await bcrypt.compare(password, user.password))) {

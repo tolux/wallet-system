@@ -11,13 +11,14 @@ Install the required dependencies using yarn:
 
 cd wallet-system
 yarn add
-Configure the database connection by editing the .env file:
 
-DB_HOST=localhost
-DB_PORT=5432
-DB_USERNAME=your-username
-DB_PASSWORD=your-password
-DB_DATABASE=my-nestjs-app
+Configure the database connection by editing the src/constact/app.config.ts file:
+
+host: 'localhost',
+port: 3306,
+username: 'root',
+password: '',
+database: 'userauth',
 
 yarn start:dev
 The application should now be running at http://localhost:3000.
